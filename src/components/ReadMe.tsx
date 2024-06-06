@@ -6,7 +6,9 @@ export default function ReadMe() {
     return (
         <div className="read-me-container paper">
             <p className='read-me-header'>About Me</p>
-            <p className='read-me-text'>I'm a full stack developer with a passion for building user-friendly and accessible web applications. I have a strong background in front-end development, with experience in React, Node.js, and TypeScript. I am also proficient in back-end development using Express and MongoDB.</p>
+            <p className='read-me-text'>
+                I'm a full stack developer with a passion for creating software that helps people. As long as I can solve a problem that people have, I will put all I have into a project. I have experience working with a variety of programming languages and frameworks, and I'm always looking to learn new technologies and tools. I have the most experience developing mobile applications, however, I am also equipped to work on web applications and backend services.
+            </p>
             <p className='read-me-header'>Skills</p>
             <ul className='read-me-list'>
                 <li className='read-me-list-item'><span className="read-me-list-item-title">Programming Languages</span>: Python, C#, Java, Javascript, Typescript, Go</li>
