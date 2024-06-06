@@ -1,7 +1,7 @@
 # My Portfolio
 
 This is my portfolio website. I'm currently working on it.
-[https://benstewart.dev](https://www.benstewart.dev)
+[https://www.benstewart.dev](https://www.benstewart.dev)
 
 ## License
 
