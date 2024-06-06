@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --text-color: #fff;
+  --text-dimmed: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #141418
+}
+
+.container {
+  padding: 2%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-first-name {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.header-last-name {
+  font-size: 48px;
+  font-weight: 200;
+  color: var(--text-color);
+}
+
+.header-occupation {
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--text-color);
+}
+
+.header-github {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+}
+
+.header-linkedin {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+}
+
+.menu {
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu-item {
+  font-size: 24px;
+  color: var(--text-color);
+  margin-right: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.menu-item.active {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.menu-item a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.text-dimmed {
+  color: var(--text-dimmed);
+}
+
+@media (max-width: 768px) {
+  .header-first-name {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+
+  .header-last-name {
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--text-color);
+  }
+
+  .header-occupation {
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--text-color);
+  }
+
+  .header-github {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+
+  .header-linkedin {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+
+  .menu-item {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,146 @@
+.terminal-box-container {
+  margin-top: 3vh;
+  color: #c5c8c6;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.terminal-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  height: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 96%;
+  min-width: 50%;
+  padding: 10px;
+}
+
+.terminal-box-profile {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 96%;
+  min-width: 50%;
+  padding: 10px;
+}
+
+.terminal-box-contact {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 96%;
+  min-width: 50%;
+  padding: 10px;
+}
+
+.terminal-prompt {
+  color: #c5c8c6;
+  margin-right: 10px;
+  font-family: monospace;
+}
+
+.terminal-command {
+  color: rgba(0, 255, 122, 0.8);
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.0);
+  border: none;
+  font-size: 1.2rem;
+}
+
+.terminal-command:focus {
+  outline: none;
+}
+
+.terminal-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.terminal-sub-row {
+  margin-left: 40px;
+}
+
+.terminal-sub-row-item {
+  color: rgba(0, 155, 255, 0.7);
+  font-family: monospace;
+  font-size: 1.0rem;
+  margin-right: 10px;
+}
+
+.terminal-response {
+  margin-top: 10px;
+}
+
+.terminal-response-text {
+  font-family: monospace;
+}
+
+.terminal-response-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 255, 122, 0.0);
+  border: 2px dashed rgba(0, 122, 194, 0);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  /* HOVER OFF */
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: border background-color 0.3s;
+}
+
+.terminal-response-button:hover {
+  border: 2px dashed rgba(0, 122, 194, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: border background-color 0.3s;
+}
+
+.terminal-response-button.link {
+  text-decoration: none;
+}
+
+.terminal-comment {
+  margin-left: 10px;
+  font-size: 1.0rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none !important;
+  font-family: monospace;
+}
+
+.blinker {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-box-container {
+    flex-direction: column;
+  }
+
+  .terminal-box {
+    min-width: 60%;
+    width: 94%;
+  }
+
+  .terminal-box-profile {
+    min-width: 60%;
+    width: 94%;
+  }
+
+  .terminal-comment {
+    font-size: 0px;
+  }
+}
