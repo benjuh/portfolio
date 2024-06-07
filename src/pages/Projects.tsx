@@ -1,12 +1,12 @@
 import Header from "../components/Header";
 import React from "react";
-import TerminalBoxProfile from "../components/TerminalBoxProfile";
+import TerminalBoxProject from "../components/TerminalBoxProject";
 
 export default function Projects() {
   return (
     <div className="container">
       <Header />
-      <TerminalBoxProfile />
+      <TerminalBoxProject />
     </div>
   )
 }
