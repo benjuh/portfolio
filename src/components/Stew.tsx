@@ -2,7 +2,7 @@ export default function Stew() {
     return (
         <div className="read-me-container paper">
             <p className='read-me-header'>Stew</p>
-            <a href="https://github.com/BenjuhminStewart/stew" target="_blank" rel="noreferrer" style={{ color: "rgba(0,122,194,0.8)", textDecoration: "none" }}>Check me out on Github!</a>
+            <a href="https://github.com/benjuh/stew" target="_blank" rel="noreferrer" style={{ color: "rgba(0,122,194,0.8)", textDecoration: "none" }}>Check me out on Github!</a>
             <p className='read-me-text'>
                 Stew is a CLI tool written 100% in Go that allows you to create, store, and use templates to remove boilerplate and unnecessary project setup time.</p>
             <p className='read-me-header'>Purpose</p>

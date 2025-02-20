@@ -3,11 +3,11 @@ export default function HashCli() {
     return (
         <div className="read-me-container paper">
             <p className='read-me-header'>Hashing CLI Tool</p>
-            <a style={{ color: "rgba(0,122,194,0.8)", textDecoration: "none" }} href="https://github.com/BenjuhminStewart/cryptography-project" target="_blank" rel="noreferrer">
+            <a style={{ color: "rgba(0,122,194,0.8)", textDecoration: "none" }} href="https://github.com/benjuh/cryptography-project" target="_blank" rel="noreferrer">
                 check me out on github!
             </a>
             <p className='read-me-text'>
-                This is a simple CLI tool that allows you to hash a file or string. To use it, simply check out the repository and follow the steps in the <a style={{ textDecoration: "none", color: "rgba(0,122,194,0.8)" }} href="https://github.com/BenjuhminStewart/cryptography-project/blob/main/README.md" target="_blank" rel="noreferrer">README.md</a></p>
+                This is a simple CLI tool that allows you to hash a file or string. To use it, simply check out the repository and follow the steps in the <a style={{ textDecoration: "none", color: "rgba(0,122,194,0.8)" }} href="https://github.com/benjuh/cryptography-project/blob/main/README.md" target="_blank" rel="noreferrer">README.md</a></p>
             <p className='read-me-header'>Purpose</p>
             <p className='read-me-text'>
                 This cli tool was a project for a class I took at the University of Washington. It allows you to hash a file or string with a passcode so you can encrypt local files that you don't want people to see and decrypt them with the passcode you assigned so that you can still view the contents. If you wanna send an encrypted message to someone else, have them download the repository and use the same passcode during decryption and they will be able to view the contents you sent them.
