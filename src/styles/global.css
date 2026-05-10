@@ -1,0 +1,118 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --text-primary: #c0caf5;
+  --text-dim: rgba(192, 202, 245, 0.3);
+  --blue: #7aa2f7;
+  --green: #9ece6a;
+  --yellow: #e0af68;
+  --red: #f7768e;
+  --bg-terminal: rgba(13, 13, 26, 0.92);
+  --bg-titlebar: #1e2030;
+  --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.page-root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.glow-tl {
+  position: fixed;
+  top: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 255, 180, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-br {
+  position: fixed;
+  bottom: -60px;
+  right: -40px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(122, 162, 247, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  padding: 32px;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.header-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.header-name-light {
+  font-weight: 300;
+  color: rgba(192, 202, 245, 0.45);
+}
+
+.header-breadcrumb {
+  font-size: 12px;
+  color: var(--blue);
+  font-family: var(--mono);
+  margin-top: 5px;
+}
+
+.header-breadcrumb-segment {
+  color: var(--yellow);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.social-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(122, 162, 247, 0.08);
+  border: 1px solid rgba(122, 162, 247, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.social-button:hover {
+  background: rgba(122, 162, 247, 0.15);
+  border-color: rgba(122, 162, 247, 0.35);
+}
+
+.social-button img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 20px 16px; }
+  .header-name { font-size: 24px; }
+}

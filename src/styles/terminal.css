@@ -1,0 +1,196 @@
+/* src/styles/terminal.css */
+
+.terminal-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(122, 162, 247, 0.1);
+}
+
+.terminal-titlebar {
+  background: var(--bg-titlebar);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.terminal-dot-red   { background: #f7768e; box-shadow: 0 0 6px rgba(247, 118, 142, 0.35); }
+.terminal-dot-yellow{ background: #e0af68; box-shadow: 0 0 6px rgba(224, 175, 104, 0.35); }
+.terminal-dot-green { background: #9ece6a; box-shadow: 0 0 6px rgba(158, 206, 106, 0.35); }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(192, 202, 245, 0.2);
+}
+
+.terminal-body {
+  background: var(--bg-terminal);
+  padding: 18px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.prompt-user   { color: var(--green); }
+.prompt-at     { color: var(--text-dim); }
+.prompt-host   { color: var(--blue); }
+.prompt-colon  { color: var(--text-dim); }
+.prompt-path   { color: var(--yellow); }
+.prompt-dollar { color: var(--text-dim); }
+.prompt-cmd    { color: var(--text-primary); }
+.prompt-comment {
+  color: rgba(192, 202, 245, 0.2);
+  font-size: 11px;
+  margin-left: 12px;
+}
+.prompt-ghost { opacity: 0.35; }
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--blue);
+  margin-left: 6px;
+  vertical-align: middle;
+  border-radius: 1px;
+  opacity: 0.7;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.folder-rows { margin-top: 8px; margin-bottom: 4px; }
+
+.folder-row {
+  padding: 7px 12px;
+  background: rgba(224, 175, 104, 0.06);
+  border: 1px solid rgba(224, 175, 104, 0.12);
+  border-radius: 5px;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.folder-row:hover {
+  border-color: rgba(224, 175, 104, 0.32);
+  background: rgba(224, 175, 104, 0.11);
+}
+
+.folder-row-name { flex: 1; }
+
+.folder-row-type {
+  font-size: 10px;
+  color: rgba(192, 202, 245, 0.2);
+}
+
+.readme-block {
+  padding: 12px 14px;
+  background: rgba(122, 162, 247, 0.04);
+  border-left: 2px solid rgba(122, 162, 247, 0.3);
+  border-radius: 0 6px 6px 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.readme-title {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.readme-desc {
+  color: rgba(192, 202, 245, 0.7);
+  font-size: 11px;
+  line-height: 1.7;
+  font-family: system-ui, sans-serif;
+}
+
+.readme-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.readme-tag {
+  padding: 2px 8px;
+  background: rgba(158, 206, 106, 0.1);
+  border: 1px solid rgba(158, 206, 106, 0.2);
+  border-radius: 4px;
+  color: var(--green);
+  font-size: 10px;
+  font-family: var(--mono);
+}
+
+.readme-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.readme-link {
+  padding: 4px 12px;
+  border: 1px solid rgba(122, 162, 247, 0.3);
+  border-radius: 4px;
+  color: var(--blue);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: var(--mono);
+}
+
+.readme-link:hover {
+  border-color: rgba(122, 162, 247, 0.6);
+  background: rgba(122, 162, 247, 0.08);
+}
+
+.readme-link-dim {
+  color: rgba(192, 202, 245, 0.35);
+  border-color: rgba(192, 202, 245, 0.1);
+  cursor: default;
+}
+
+.readme-link-dim:hover {
+  border-color: rgba(192, 202, 245, 0.1);
+  background: transparent;
+}
+
+.back-nav {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(122, 162, 247, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.back-nav:hover { color: var(--blue); }
+
+@media (max-width: 600px) {
+  .terminal-body { padding: 14px 12px; font-size: 11px; }
+  .folder-row { font-size: 11px; }
+}
