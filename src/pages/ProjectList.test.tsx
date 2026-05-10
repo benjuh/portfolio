@@ -20,7 +20,7 @@ describe('ProjectList', () => {
     renderWithRouter(<ProjectList />);
     const unifiedLink = screen.getByRole('link', { name: /unified/ });
     expect(unifiedLink).toHaveAttribute('href', '/projects/unified');
-    const stewLink = screen.getByRole('link', { name: /stew/ });
+    const stewLink = screen.getByRole('link', { name: 'stew' });
     expect(stewLink).toHaveAttribute('href', '/projects/stew');
   });
 

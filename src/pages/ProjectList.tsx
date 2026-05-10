@@ -5,15 +5,6 @@ import { projects } from '../data/projects';
 import '../styles/global.css';
 import '../styles/terminal.css';
 
-// Prevent aria-label collisions when one slug is a prefix of another (e.g. "stew" in "stewordle").
-// Capitalise the first letter of any slug whose lowercase form starts with another slug,
-// so /stew/ (case-sensitive) matches "stew" but NOT "Stewordle".
-const slugAriaLabel = (slug: string): string => {
-  const isSuperset = projects.some(
-    (other) => other.slug !== slug && slug.startsWith(other.slug)
-  );
-  return isSuperset ? slug.charAt(0).toUpperCase() + slug.slice(1) : slug;
-};
 
 export default function ProjectList() {
   return (
@@ -39,7 +30,7 @@ export default function ProjectList() {
                 key={p.slug}
                 to={`/projects/${p.slug}`}
                 className="folder-row"
-                aria-label={slugAriaLabel(p.slug)}
+                aria-label={p.slug}
               >
                 <span aria-hidden="true">📁</span>
                 <span className="folder-row-name">{p.slug}</span>

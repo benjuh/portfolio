@@ -1,0 +1,155 @@
+<h2>Portfolio Restyle — Design Directions</h2>
+<p class="subtitle">Same terminal theme, three very different aesthetics. Pick the vibe that feels right.</p>
+
+<div class="cards">
+
+  <!-- Option A: Glassmorphic Terminal -->
+  <div class="card" data-choice="glass" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(135deg, #0d0d1a 0%, #0a0a1f 50%, #0d1a2e 100%); padding: 20px; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Ambient glow blobs -->
+      <div style="position:absolute;top:-40px;left:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(0,255,180,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:-20px;right:20px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,120,255,0.1) 0%,transparent 70%);pointer-events:none;"></div>
+
+      <!-- Header -->
+      <div style="margin-bottom:18px;">
+        <div style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;font-family:system-ui;">Benjamin <span style="font-weight:300;color:rgba(255,255,255,0.6);">Stewart</span></div>
+        <div style="font-size:11px;color:rgba(0,255,180,0.7);font-family:monospace;letter-spacing:3px;text-transform:uppercase;margin-top:2px;">Software Engineer</div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;">
+            <div style="width:12px;height:12px;background:rgba(255,255,255,0.5);border-radius:2px;"></div>
+          </div>
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;">
+            <div style="width:12px;height:12px;background:rgba(0,120,255,0.7);border-radius:2px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Glassmorphic terminal window -->
+      <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px;box-shadow:0 8px 32px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <!-- Window chrome -->
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.07);">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+          <div style="margin-left:auto;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">~</div>
+        </div>
+        <!-- Terminal content -->
+        <div style="font-family:monospace;font-size:11px;line-height:1.7;">
+          <div><span style="color:rgba(0,255,180,0.8);">~</span><span style="color:rgba(255,255,255,0.4);">$</span> <span style="color:#7dd3fc;">ls</span> <span style="color:rgba(255,255,255,0.2);"># press the results below!</span></div>
+          <div style="margin-top:8px;display:flex;flex-direction:column;gap:4px;">
+            <div style="padding:5px 8px;background:rgba(0,255,180,0.06);border:1px solid rgba(0,255,180,0.15);border-radius:6px;color:rgba(255,255,255,0.8);cursor:pointer;display:flex;align-items:center;gap:8px;">
+              <span style="color:rgba(0,255,180,0.6);">▸</span> README.md
+            </div>
+            <div style="padding:5px 8px;background:rgba(0,120,255,0.06);border:1px solid rgba(0,120,255,0.15);border-radius:6px;color:rgba(255,255,255,0.8);cursor:pointer;display:flex;align-items:center;gap:8px;">
+              <span style="color:rgba(0,120,255,0.7);">📁</span> projects/
+            </div>
+            <div style="padding:5px 8px;background:rgba(0,120,255,0.06);border:1px solid rgba(0,120,255,0.15);border-radius:6px;color:rgba(255,255,255,0.8);cursor:pointer;display:flex;align-items:center;gap:8px;">
+              <span style="color:rgba(0,120,255,0.7);">📁</span> contact/
+            </div>
+          </div>
+          <div style="margin-top:8px;"><span style="color:rgba(255,255,255,0.3);">$</span> <span style="color:rgba(0,255,180,0.8);">_</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Glassmorphic Terminal</h3>
+      <p>Frosted glass windows, ambient glows, subtle gradients. Modern 2024 aesthetic — feels like Hyper or Warp terminal. Elegant and premium.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Synthwave / Retro -->
+  <div class="card" data-choice="synthwave" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0015; padding: 20px; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Grid background -->
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(180,0,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(180,0,255,0.08) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;"></div>
+      <!-- Horizon glow -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,rgba(255,0,180,0.15),transparent);pointer-events:none;"></div>
+      <!-- Scanlines -->
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 4px);pointer-events:none;"></div>
+
+      <!-- Header -->
+      <div style="margin-bottom:18px;position:relative;">
+        <div style="font-size:22px;font-weight:900;color:#fff;font-family:system-ui;text-shadow:0 0 20px rgba(255,0,180,0.8),0 0 40px rgba(255,0,180,0.4);">BENJAMIN <span style="color:rgba(0,240,255,0.9);text-shadow:0 0 20px rgba(0,240,255,0.8);">STEWART</span></div>
+        <div style="font-size:10px;color:rgba(255,0,180,0.9);font-family:monospace;letter-spacing:4px;text-transform:uppercase;margin-top:3px;text-shadow:0 0 8px rgba(255,0,180,0.6);">◈ SOFTWARE ENGINEER ◈</div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <div style="padding:3px 10px;border:1px solid rgba(255,0,180,0.4);border-radius:2px;font-family:monospace;font-size:9px;color:rgba(255,0,180,0.8);letter-spacing:1px;">GITHUB</div>
+          <div style="padding:3px 10px;border:1px solid rgba(0,240,255,0.4);border-radius:2px;font-family:monospace;font-size:9px;color:rgba(0,240,255,0.8);letter-spacing:1px;">LINKEDIN</div>
+        </div>
+      </div>
+
+      <!-- Terminal window -->
+      <div style="border:1px solid rgba(255,0,180,0.4);border-radius:4px;padding:12px;background:rgba(0,0,0,0.6);box-shadow:0 0 20px rgba(255,0,180,0.15),inset 0 0 20px rgba(0,0,0,0.5);position:relative;">
+        <div style="position:absolute;top:-1px;left:12px;right:12px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,0,180,0.8),transparent);"></div>
+        <!-- Window label -->
+        <div style="font-family:monospace;font-size:9px;color:rgba(255,0,180,0.6);letter-spacing:2px;margin-bottom:10px;">▸ TERMINAL v2.0 ◂</div>
+        <!-- Terminal content -->
+        <div style="font-family:monospace;font-size:11px;line-height:1.7;">
+          <div><span style="color:rgba(255,0,180,0.9);">~/</span><span style="color:rgba(255,255,255,0.5);">$</span> <span style="color:rgba(0,240,255,0.9);">ls</span></div>
+          <div style="margin-top:6px;display:flex;flex-direction:column;gap:3px;">
+            <div style="padding:4px 8px;border-left:2px solid rgba(255,0,180,0.7);color:rgba(255,255,255,0.85);">README.md</div>
+            <div style="padding:4px 8px;border-left:2px solid rgba(0,240,255,0.7);color:rgba(0,240,255,0.85);">projects/</div>
+            <div style="padding:4px 8px;border-left:2px solid rgba(0,240,255,0.7);color:rgba(0,240,255,0.85);">contact/</div>
+          </div>
+          <div style="margin-top:6px;"><span style="color:rgba(255,255,255,0.3);">$</span> <span style="color:rgba(255,0,180,0.9);animation:blink 1s step-end infinite;">█</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Synthwave / Retro-Futuristic</h3>
+      <p>Magenta + cyan neon, grid background, scanlines, glowing borders. Bold and distinctive — screams "hacker aesthetic". High energy, unforgettable.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Clean OS Terminal -->
+  <div class="card" data-choice="os" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #1a1b26; padding: 20px; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Subtle noise texture feel via gradient -->
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(122,162,247,0.06) 0%,transparent 60%);pointer-events:none;"></div>
+
+      <!-- Header — clean, minimal -->
+      <div style="margin-bottom:18px;">
+        <div style="font-size:13px;color:rgba(122,162,247,0.6);font-family:monospace;letter-spacing:1px;">benjaminstewart.dev</div>
+        <div style="font-size:24px;font-weight:700;color:#c0caf5;font-family:system-ui;margin-top:2px;">Benjamin Stewart</div>
+        <div style="font-size:12px;color:#7aa2f7;font-family:monospace;margin-top:2px;">→ Software Engineer</div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <span style="font-size:10px;padding:2px 8px;background:rgba(122,162,247,0.1);border:1px solid rgba(122,162,247,0.2);border-radius:4px;color:rgba(122,162,247,0.8);font-family:monospace;">github</span>
+          <span style="font-size:10px;padding:2px 8px;background:rgba(122,162,247,0.1);border:1px solid rgba(122,162,247,0.2);border-radius:4px;color:rgba(122,162,247,0.8);font-family:monospace;">linkedin</span>
+        </div>
+      </div>
+
+      <!-- Realistic terminal window -->
+      <div style="border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.5);">
+        <!-- Title bar -->
+        <div style="background:#24283b;padding:8px 12px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <div style="width:10px;height:10px;border-radius:50%;background:#f7768e;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#e0af68;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#9ece6a;"></div>
+          <div style="flex:1;text-align:center;font-family:monospace;font-size:9px;color:rgba(255,255,255,0.25);">~ — zsh</div>
+        </div>
+        <!-- Terminal body -->
+        <div style="background:#1a1b26;padding:12px;font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.8;">
+          <div>
+            <span style="color:#9ece6a;">benjaminstewart</span><span style="color:rgba(255,255,255,0.4);">@</span><span style="color:#7aa2f7;">portfolio</span><span style="color:rgba(255,255,255,0.4);">:</span><span style="color:#e0af68;">~</span><span style="color:rgba(255,255,255,0.4);">$</span>
+            <span style="color:#c0caf5;"> ls</span>
+          </div>
+          <div style="margin-top:6px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+            <div style="color:#7aa2f7;font-size:10px;">📄 README.md</div>
+            <div style="color:#e0af68;font-size:10px;">📁 projects/</div>
+            <div style="color:#e0af68;font-size:10px;">📁 contact/</div>
+          </div>
+          <div style="margin-top:8px;">
+            <span style="color:#9ece6a;">benjaminstewart</span><span style="color:rgba(255,255,255,0.4);">@</span><span style="color:#7aa2f7;">portfolio</span><span style="color:rgba(255,255,255,0.4);">:</span><span style="color:#e0af68;">~</span><span style="color:rgba(255,255,255,0.4);">$</span>
+            <span style="color:rgba(255,255,255,0.5);"> ▌</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Clean OS Terminal (Tokyo Night)</h3>
+      <p>Realistic terminal chrome (traffic lights), full username@host prompt, Tokyo Night color palette. Professional, dev-credible, polished without trying too hard.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px;text-align:center;">Click a card to select. You can pick more than one if you want to mix elements.</p>

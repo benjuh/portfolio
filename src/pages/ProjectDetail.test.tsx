@@ -33,8 +33,9 @@ describe('ProjectDetail', () => {
 
   it('renders github link when available', () => {
     renderAtSlug('stew');
-    const ghLink = screen.getByRole('link', { name: /github/i });
-    expect(ghLink).toHaveAttribute('href', 'https://github.com/benjuh/stew');
+    const links = screen.getAllByRole('link', { name: /github/i });
+    const repoLink = links.find(l => l.getAttribute('href') === 'https://github.com/benjuh/stew');
+    expect(repoLink).toBeTruthy();
   });
 
   it('shows private repo label when no github link', () => {

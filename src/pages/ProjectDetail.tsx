@@ -1,10 +1,9 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
+import Header from '../components/Header';
 import TerminalWindow from '../components/TerminalWindow';
 import { projects } from '../data/projects';
 import '../styles/global.css';
 import '../styles/terminal.css';
-import github from '../assets/github-mark-white.png';
-import linkedin from '../assets/linkedin.png';
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -17,24 +16,7 @@ export default function ProjectDetail() {
       <div className="glow-tl" />
       <div className="glow-br" />
       <div className="container">
-        <div className="header">
-          <div>
-            <div className="header-name">
-              Benjamin <span className="header-name-light">Stewart</span>
-            </div>
-            <div className="header-breadcrumb">
-              → projects / <span className="header-breadcrumb-segment">{project.slug}</span>
-            </div>
-          </div>
-          <div className="social-buttons">
-            <a href="https://github.com/benjuh" target="_blank" rel="noreferrer" className="social-button" aria-label="source code">
-              <img src={github} alt="source code" />
-            </a>
-            <a href="https://www.linkedin.com/in/benjuhminstewart/" target="_blank" rel="noreferrer" className="social-button" aria-label="professional profile">
-              <img src={linkedin} alt="professional profile" />
-            </a>
-          </div>
-        </div>
+        <Header breadcrumb={project.slug} />
         <TerminalWindow title={`~/${project.slug} — zsh`}>
           <div className="prompt-ghost">
             <span className="prompt-user">benjamin</span>
