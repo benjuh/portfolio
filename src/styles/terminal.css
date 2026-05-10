@@ -18,8 +18,8 @@
 }
 
 .terminal-dot {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -32,17 +32,23 @@
   flex: 1;
   text-align: center;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   color: rgba(192, 202, 245, 0.2);
 }
 
 .terminal-body {
   background: var(--bg-terminal);
-  padding: 18px 20px;
+  padding: 20px 24px;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 2;
 }
+
+.prompt-host-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.prompt-host-link:hover { text-decoration: underline; }
 
 .prompt-user   { color: var(--green); }
 .prompt-at     { color: var(--text-dim); }
@@ -53,15 +59,15 @@
 .prompt-cmd    { color: var(--text-primary); }
 .prompt-comment {
   color: rgba(192, 202, 245, 0.2);
-  font-size: 11px;
+  font-size: 13px;
   margin-left: 12px;
 }
 .prompt-ghost { opacity: 0.35; }
 
 .terminal-cursor {
   display: inline-block;
-  width: 8px;
-  height: 14px;
+  width: 9px;
+  height: 17px;
   background: var(--blue);
   margin-left: 6px;
   vertical-align: middle;
@@ -75,19 +81,19 @@
 .folder-rows { margin-top: 8px; margin-bottom: 4px; }
 
 .folder-row {
-  padding: 7px 12px;
+  padding: 11px 16px;
   background: rgba(224, 175, 104, 0.06);
   border: 1px solid rgba(224, 175, 104, 0.12);
   border-radius: 5px;
   color: var(--yellow);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   cursor: pointer;
   text-decoration: none;
   transition: border-color 0.15s, background 0.15s;
-  margin-bottom: 4px;
-  font-size: 13px;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
 .folder-row:hover {
@@ -95,11 +101,29 @@
   background: rgba(224, 175, 104, 0.11);
 }
 
-.folder-row-name { flex: 1; }
+.folder-row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.folder-row-name { color: var(--yellow); }
+
+.folder-row-desc {
+  font-size: 12px;
+  color: rgba(192, 202, 245, 0.45);
+  font-family: system-ui, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .folder-row-type {
-  font-size: 10px;
+  font-size: 12px;
   color: rgba(192, 202, 245, 0.2);
+  flex-shrink: 0;
 }
 
 .readme-block {
@@ -111,17 +135,51 @@
   margin-bottom: 2px;
 }
 
+.readme-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.readme-type {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: rgba(192, 202, 245, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.readme-visibility {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.readme-visibility-private {
+  color: rgba(247, 118, 142, 0.7);
+  background: rgba(247, 118, 142, 0.07);
+  border: 1px solid rgba(247, 118, 142, 0.2);
+}
+
+.readme-visibility-public {
+  color: rgba(158, 206, 106, 0.8);
+  background: rgba(158, 206, 106, 0.07);
+  border: 1px solid rgba(158, 206, 106, 0.2);
+}
+
 .readme-title {
   color: var(--blue);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .readme-desc {
-  color: rgba(192, 202, 245, 0.7);
-  font-size: 11px;
-  line-height: 1.7;
+  color: rgba(192, 202, 245, 0.75);
+  font-size: 15px;
+  line-height: 1.75;
   font-family: system-ui, sans-serif;
 }
 
@@ -133,12 +191,12 @@
 }
 
 .readme-tag {
-  padding: 2px 8px;
+  padding: 3px 10px;
   background: rgba(158, 206, 106, 0.1);
   border: 1px solid rgba(158, 206, 106, 0.2);
   border-radius: 4px;
   color: var(--green);
-  font-size: 10px;
+  font-size: 12px;
   font-family: var(--mono);
 }
 
@@ -150,11 +208,11 @@
 }
 
 .readme-link {
-  padding: 4px 12px;
+  padding: 5px 14px;
   border: 1px solid rgba(122, 162, 247, 0.3);
   border-radius: 4px;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   text-decoration: none;
   transition: border-color 0.15s, background 0.15s;
@@ -178,17 +236,27 @@
 }
 
 .back-nav {
-  display: inline-block;
-  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 8px 18px;
   font-family: var(--mono);
-  font-size: 11px;
-  color: rgba(122, 162, 247, 0.5);
+  font-size: 15px;
+  color: var(--green);
+  background: rgba(158, 206, 106, 0.07);
+  border: 1px solid rgba(158, 206, 106, 0.3);
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
 }
 
-.back-nav:hover { color: var(--blue); }
+.back-nav:hover {
+  color: var(--green);
+  background: rgba(158, 206, 106, 0.14);
+  border-color: rgba(158, 206, 106, 0.55);
+}
 
 @media (max-width: 600px) {
   .terminal-body { padding: 14px 12px; font-size: 11px; }

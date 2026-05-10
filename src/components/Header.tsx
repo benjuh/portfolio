@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/global.css';
 import github from '../assets/github-mark-white.png';
 import linkedin from '../assets/linkedin.png';
@@ -14,7 +15,7 @@ export default function Header({ breadcrumb }: Props) {
           Benjamin <span className="header-name-light">Stewart</span>
         </div>
         <div className="header-breadcrumb">
-          → projects
+          <Link to="/" className="header-breadcrumb-link">→ projects</Link>
           {breadcrumb && (
             <> / <span className="header-breadcrumb-segment">{breadcrumb}</span></>
           )}

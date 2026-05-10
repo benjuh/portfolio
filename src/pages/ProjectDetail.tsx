@@ -21,7 +21,7 @@ export default function ProjectDetail() {
           <div className="prompt-ghost">
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>
-            <span className="prompt-host">portfolio</span>
+            <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
             <span className="prompt-colon">:</span>
             <span className="prompt-path">~</span>
             <span className="prompt-dollar">$</span>
@@ -30,13 +30,19 @@ export default function ProjectDetail() {
           <div>
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>
-            <span className="prompt-host">portfolio</span>
+            <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
             <span className="prompt-colon">:</span>
             <span className="prompt-path">~/{project.slug}</span>
             <span className="prompt-dollar">$</span>
             <span className="prompt-cmd"> cat README.md</span>
           </div>
           <div className="readme-block">
+            <div className="readme-meta">
+              <span className="readme-type">{project.type}</span>
+              <span className={`readme-visibility ${project.private ? 'readme-visibility-private' : 'readme-visibility-public'}`}>
+                {project.private ? '🔒 private' : '◎ open source'}
+              </span>
+            </div>
             <div className="readme-title"># {project.name}</div>
             <div className="readme-desc">{project.description}</div>
             <div className="readme-tags">
@@ -62,7 +68,7 @@ export default function ProjectDetail() {
           <div>
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>
-            <span className="prompt-host">portfolio</span>
+            <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
             <span className="prompt-colon">:</span>
             <span className="prompt-path">~/{project.slug}</span>
             <span className="prompt-dollar">$</span>

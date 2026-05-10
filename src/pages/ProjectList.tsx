@@ -17,7 +17,7 @@ export default function ProjectList() {
           <div>
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>
-            <span className="prompt-host">portfolio</span>
+            <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
             <span className="prompt-colon">:</span>
             <span className="prompt-path">~</span>
             <span className="prompt-dollar">$</span>
@@ -33,7 +33,10 @@ export default function ProjectList() {
                 aria-label={p.slug}
               >
                 <span aria-hidden="true">📁</span>
-                <span className="folder-row-name">{p.slug}</span>
+                <span className="folder-row-info">
+                  <span className="folder-row-name">{p.slug}</span>
+                  <span className="folder-row-desc">{p.description}</span>
+                </span>
                 <span className="folder-row-type">{p.type}</span>
               </Link>
             ))}
@@ -41,7 +44,7 @@ export default function ProjectList() {
           <div>
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>
-            <span className="prompt-host">portfolio</span>
+            <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
             <span className="prompt-colon">:</span>
             <span className="prompt-path">~</span>
             <span className="prompt-dollar">$</span>
