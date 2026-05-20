@@ -11,6 +11,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'stall-stars',
+    name: 'Stall Stars',
+    type: 'mobile app',
+    description:
+      'iOS and Android app for finding, rating, and reviewing public restrooms. Features an interactive map, amenity filters, OTP authentication, and a full review system with cleanliness, entry, and features scoring.',
+    tech: ['TypeScript', 'Go', 'React Native', 'Expo', 'PostgreSQL', 'Neon', 'Render'],
+    private: true,
+  },
+  {
     slug: 'unified',
     name: 'Unified',
     type: 'mobile app',
