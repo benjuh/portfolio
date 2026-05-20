@@ -7,13 +7,15 @@ const renderWithRouter = (ui: React.ReactElement) =>
   render(<MemoryRouter>{ui}</MemoryRouter>);
 
 describe('ProjectList', () => {
-  it('renders all 5 project folder rows', () => {
+  it('renders all project folder rows', () => {
     renderWithRouter(<ProjectList />);
+    expect(screen.getByText('stall-stars')).toBeInTheDocument();
     expect(screen.getByText('unified')).toBeInTheDocument();
     expect(screen.getByText('speakeasy')).toBeInTheDocument();
     expect(screen.getByText('hash-cli')).toBeInTheDocument();
     expect(screen.getByText('stewordle')).toBeInTheDocument();
     expect(screen.getByText('stew')).toBeInTheDocument();
+    expect(screen.getByText('griddy')).toBeInTheDocument();
   });
 
   it('each project links to /projects/:slug', () => {
@@ -26,7 +28,7 @@ describe('ProjectList', () => {
 
   it('shows the ls command in the terminal', () => {
     renderWithRouter(<ProjectList />);
-    expect(screen.getByText(/ls/)).toBeInTheDocument();
+    expect(screen.getByText(/ls/, { selector: '.prompt-cmd' })).toBeInTheDocument();
   });
 
   it('renders GitHub and LinkedIn links', () => {

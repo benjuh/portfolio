@@ -46,7 +46,7 @@ describe('ProjectDetail', () => {
   it('renders demo link when available', () => {
     renderAtSlug('stewordle');
     const demoLink = screen.getByRole('link', { name: /live demo/i });
-    expect(demoLink).toHaveAttribute('href', 'https://www.stewordle.com');
+    expect(demoLink).toHaveAttribute('href', 'https://www.stewdioben.com/stewordle/');
   });
 
   it('renders breadcrumb with project slug', () => {

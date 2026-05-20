@@ -51,9 +51,9 @@ export const projects: Project[] = [
     name: 'Stewordle',
     type: 'web game',
     description:
-      'Unlimited Wordle clone — same 5-letter word guessing mechanics, no daily wait. Play as many rounds as you want.',
+      'Word puzzle with 4 modes — Classic, Quad, Octo, and 16. Unlimited plays, no daily wait.',
     tech: ['JavaScript', 'HTML', 'CSS'],
-    demo: 'https://www.stewordle.com',
+    demo: 'https://www.stewdioben.com/stewordle/',
     private: true,
   },
   {
@@ -64,5 +64,15 @@ export const projects: Project[] = [
       'Go CLI tool for creating, storing, and applying project templates — eliminating boilerplate setup for any language or framework.',
     tech: ['Go', 'Cobra', 'Viper'],
     github: 'https://github.com/benjuh/stew',
+  },
+  {
+    slug: 'griddy',
+    name: 'Griddy',
+    type: 'web game',
+    description:
+      'Daily NFL player grid — pick a player that satisfies two intersecting team and college parameters. Nine squares, nine chances.',
+    tech: ['React', 'JavaScript', 'Node.js'],
+    demo: 'https://www.stewdioben.com/griddy/',
+    private: true,
   },
 ];
