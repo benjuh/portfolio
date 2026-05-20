@@ -72,7 +72,7 @@ export const projects: Project[] = [
     description:
       'Daily NFL player grid — pick a player that satisfies two intersecting team and college parameters. Nine squares, nine chances.',
     tech: ['React', 'JavaScript', 'Node.js'],
-    demo: 'https://www.stewdioben.com/griddy/',
+    demo: 'https://www.stewdioben.com/griddy',
     private: true,
   },
 ];
