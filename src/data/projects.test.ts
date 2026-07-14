@@ -27,6 +27,6 @@ describe('projects data', () => {
 
   it('slugs match expected values', () => {
     const slugs = projects.map((p) => p.slug);
-    expect(slugs).toEqual(['stall-stars', 'unified', 'speakeasy', 'hash-cli', 'stewordle', 'stew', 'griddy', 'selah']);
+    expect(slugs).toEqual(['selah', 'unified', 'stall-stars', 'stewordle', 'griddy', 'speakeasy', 'hash-cli', 'stew']);
   });
 });

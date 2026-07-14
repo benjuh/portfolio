@@ -12,13 +12,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'stall-stars',
-    name: 'Stall Stars',
-    type: 'mobile app',
+    slug: 'selah',
+    name: 'Selah',
+    type: 'desktop app',
     description:
-      'iOS and Android app for finding, rating, and reviewing public restrooms. Features an interactive map, amenity filters, OTP authentication, and a full review system with cleanliness, entry, and features scoring.',
-    tech: ['TypeScript', 'Go', 'React Native', 'Expo', 'PostgreSQL', 'Neon', 'Render'],
+      'Bible reader for pausing, reflecting, and studying the Word. Distraction-free reading across multiple translations, verse highlighting and tagging, a prayer journal, Bible quizzes, reading streaks, and studying with friends.',
+    tech: ['JavaScript', 'Electron', 'Express', 'SQLite'],
     private: true,
+    screenshots: [
+      '/screenshots/selah-reader.webp',
+      '/screenshots/selah-study.webp',
+      '/screenshots/selah-landing.webp',
+    ],
   },
   {
     slug: 'unified',
@@ -28,6 +33,43 @@ export const projects: Project[] = [
       'iOS and Android app allowing community members to report local incidents to HOA and city officials. Reduced area crime and improved response times since deployment.',
     tech: ['React Native', 'Expo', 'JavaScript', 'PostgreSQL', 'Supabase'],
     private: true,
+  },
+  {
+    slug: 'stall-stars',
+    name: 'Stall Stars',
+    type: 'mobile app',
+    description:
+      'iOS and Android app for finding, rating, and reviewing public restrooms. Features an interactive map, amenity filters, OTP authentication, and a full review system with cleanliness, entry, and features scoring.',
+    tech: ['TypeScript', 'Go', 'React Native', 'Expo', 'PostgreSQL', 'Neon', 'Render'],
+    private: true,
+  },
+  {
+    slug: 'stewordle',
+    name: 'Stewordle',
+    type: 'web game',
+    description:
+      'Word puzzle with 4 modes — Classic, Quad, Octo, and 16. Unlimited plays, no daily wait.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    demo: 'https://www.stewdioben.com/stewordle/',
+    private: true,
+    screenshots: [
+      '/screenshots/stewordle-play.webp',
+      '/screenshots/stewordle-16.webp',
+    ],
+  },
+  {
+    slug: 'griddy',
+    name: 'Griddy',
+    type: 'web game',
+    description:
+      'Daily NFL player grid — pick a player that satisfies two intersecting team and college parameters. Nine squares, nine chances.',
+    tech: ['React', 'JavaScript', 'Node.js'],
+    demo: 'https://www.stewdioben.com/griddy',
+    private: true,
+    screenshots: [
+      '/screenshots/griddy-filled.webp',
+      '/screenshots/griddy-search.webp',
+    ],
   },
   {
     slug: 'speakeasy',
@@ -48,17 +90,6 @@ export const projects: Project[] = [
     github: 'https://github.com/benjuh/cryptography-project',
   },
   {
-    slug: 'stewordle',
-    name: 'Stewordle',
-    type: 'web game',
-    description:
-      'Word puzzle with 4 modes — Classic, Quad, Octo, and 16. Unlimited plays, no daily wait.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-    demo: 'https://www.stewdioben.com/stewordle/',
-    private: true,
-    screenshots: ['/screenshots/stewordle.webp'],
-  },
-  {
     slug: 'stew',
     name: 'Stew',
     type: 'cli tool',
@@ -66,26 +97,5 @@ export const projects: Project[] = [
       'Go CLI tool for creating, storing, and applying project templates — eliminating boilerplate setup for any language or framework.',
     tech: ['Go', 'Cobra', 'Viper'],
     github: 'https://github.com/benjuh/stew',
-  },
-  {
-    slug: 'griddy',
-    name: 'Griddy',
-    type: 'web game',
-    description:
-      'Daily NFL player grid — pick a player that satisfies two intersecting team and college parameters. Nine squares, nine chances.',
-    tech: ['React', 'JavaScript', 'Node.js'],
-    demo: 'https://www.stewdioben.com/griddy',
-    private: true,
-    screenshots: ['/screenshots/griddy.webp'],
-  },
-  {
-    slug: 'selah',
-    name: 'Selah',
-    type: 'desktop app',
-    description:
-      'Bible reader for pausing, reflecting, and studying the Word. Distraction-free reading across multiple translations, verse highlighting and tagging, a prayer journal, Bible quizzes, reading streaks, and studying with friends.',
-    tech: ['JavaScript', 'Electron', 'Express', 'SQLite'],
-    private: true,
-    screenshots: ['/screenshots/selah.webp'],
   },
 ];
