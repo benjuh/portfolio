@@ -65,6 +65,30 @@ export default function ProjectDetail() {
               )}
             </div>
           </div>
+          {project.screenshots && project.screenshots.length > 0 && (
+            <>
+              <div>
+                <span className="prompt-user">benjamin</span>
+                <span className="prompt-at">@</span>
+                <Link to="/" className="prompt-host prompt-host-link">portfolio</Link>
+                <span className="prompt-colon">:</span>
+                <span className="prompt-path">~/{project.slug}</span>
+                <span className="prompt-dollar">$</span>
+                <span className="prompt-cmd"> open screenshots/</span>
+              </div>
+              <div className="screenshot-gallery">
+                {project.screenshots.map((src) => (
+                  <img
+                    key={src}
+                    src={process.env.PUBLIC_URL + src}
+                    alt={`${project.name} screenshot`}
+                    className="screenshot-img"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </>
+          )}
           <div>
             <span className="prompt-user">benjamin</span>
             <span className="prompt-at">@</span>

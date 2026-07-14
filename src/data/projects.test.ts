@@ -16,8 +16,8 @@ describe('projects data', () => {
     });
   });
 
-  it('has exactly 7 projects', () => {
-    expect(projects).toHaveLength(7);
+  it('has exactly 8 projects', () => {
+    expect(projects).toHaveLength(8);
   });
 
   it('slugs are unique', () => {
@@ -27,6 +27,6 @@ describe('projects data', () => {
 
   it('slugs match expected values', () => {
     const slugs = projects.map((p) => p.slug);
-    expect(slugs).toEqual(['stall-stars', 'unified', 'speakeasy', 'hash-cli', 'stewordle', 'stew', 'griddy']);
+    expect(slugs).toEqual(['stall-stars', 'unified', 'speakeasy', 'hash-cli', 'stewordle', 'stew', 'griddy', 'selah']);
   });
 });

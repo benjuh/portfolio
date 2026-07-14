@@ -16,6 +16,7 @@ describe('ProjectList', () => {
     expect(screen.getByText('stewordle')).toBeInTheDocument();
     expect(screen.getByText('stew')).toBeInTheDocument();
     expect(screen.getByText('griddy')).toBeInTheDocument();
+    expect(screen.getByText('selah')).toBeInTheDocument();
   });
 
   it('each project links to /projects/:slug', () => {

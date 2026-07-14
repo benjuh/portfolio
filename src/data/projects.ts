@@ -7,6 +7,7 @@ export interface Project {
   github?: string;
   demo?: string;
   private?: boolean;
+  screenshots?: string[];
 }
 
 export const projects: Project[] = [
@@ -55,6 +56,7 @@ export const projects: Project[] = [
     tech: ['JavaScript', 'HTML', 'CSS'],
     demo: 'https://www.stewdioben.com/stewordle/',
     private: true,
+    screenshots: ['/screenshots/stewordle.webp'],
   },
   {
     slug: 'stew',
@@ -74,5 +76,16 @@ export const projects: Project[] = [
     tech: ['React', 'JavaScript', 'Node.js'],
     demo: 'https://www.stewdioben.com/griddy',
     private: true,
+    screenshots: ['/screenshots/griddy.webp'],
+  },
+  {
+    slug: 'selah',
+    name: 'Selah',
+    type: 'desktop app',
+    description:
+      'Bible reader for pausing, reflecting, and studying the Word. Distraction-free reading across multiple translations, verse highlighting and tagging, a prayer journal, Bible quizzes, reading streaks, and studying with friends.',
+    tech: ['JavaScript', 'Electron', 'Express', 'SQLite'],
+    private: true,
+    screenshots: ['/screenshots/selah.webp'],
   },
 ];

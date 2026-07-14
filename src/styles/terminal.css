@@ -235,6 +235,20 @@
   background: transparent;
 }
 
+.screenshot-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+
+.screenshot-img {
+  max-width: 100%;
+  border: 1px solid rgba(122, 162, 247, 0.25);
+  border-radius: 6px;
+  display: block;
+}
+
 .back-nav {
   display: inline-flex;
   align-items: center;
